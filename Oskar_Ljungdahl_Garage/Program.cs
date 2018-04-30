@@ -11,7 +11,7 @@ namespace Oskar_Ljungdahl_Garage
         static void Main(string[] args)
         {
 
-
+            Console.WriteLine("HAMMARBY");
         }
     }
 }
