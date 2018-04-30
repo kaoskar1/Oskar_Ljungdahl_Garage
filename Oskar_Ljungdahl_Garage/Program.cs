@@ -16,7 +16,8 @@ namespace Oskar_Ljungdahl_Garage
 
         private static void printMenu()
         {
-
+            Console.SetCursorPosition(0, 0);
+            Console.CursorVisible = false;
             Console.WriteLine("****GARAGE****");
             Console.WriteLine("****(L)ist****");
             //Console.WriteLine("List all the vehicle in the (G)arage");
@@ -27,6 +28,8 @@ namespace Oskar_Ljungdahl_Garage
             Console.WriteLine("****(E)dit****");
             //Console.WriteLine("(A)dd A Vehicle");
             //Console.WriteLine("(R)emove a Vehicle");
+            Console.WriteLine("    (B)ack   ");
+            Console.WriteLine("    (Q)uit");
 
             var menuMode = true;
             do {
@@ -78,6 +81,16 @@ namespace Oskar_Ljungdahl_Garage
                     case ConsoleKey.R:
                         menuMode = true;
                         Console.WriteLine("R preesed");
+                        break;
+
+                    case ConsoleKey.B:
+                        menuMode = true;
+                        Console.WriteLine("B preesed");
+                        break;
+
+                    case ConsoleKey.Q:
+                        menuMode = true;
+                        Console.WriteLine("Q preesed");
                         break;
 
                 }
