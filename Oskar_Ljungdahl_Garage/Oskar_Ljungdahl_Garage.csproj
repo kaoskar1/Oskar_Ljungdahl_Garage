@@ -48,6 +48,8 @@
     <Compile Include="Entities\Bus.cs" />
     <Compile Include="Entities\Car.cs" />
     <Compile Include="Entities\Vehicle.cs" />
+    <Compile Include="Garage.cs" />
+    <Compile Include="GarageHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
