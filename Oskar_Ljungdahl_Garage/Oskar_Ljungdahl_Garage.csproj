@@ -47,6 +47,7 @@
     <Compile Include="Entities\Boat.cs" />
     <Compile Include="Entities\Bus.cs" />
     <Compile Include="Entities\Car.cs" />
+    <Compile Include="Entities\IDrawable.cs" />
     <Compile Include="Entities\Vehicle.cs" />
     <Compile Include="Garage.cs" />
     <Compile Include="GarageHandler.cs" />

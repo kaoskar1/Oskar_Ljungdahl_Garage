@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Text.RegularExpressions;
+
 
 namespace Oskar_Ljungdahl_Garage
 {
@@ -10,29 +13,38 @@ namespace Oskar_Ljungdahl_Garage
     {
         static void Main(string[] args)
         {
-
+            GarageHandler.init();
             printMenu();
+            //LicensePlate();
         }
+
+
+
+
 
         private static void printMenu()
         {
-            Console.SetCursorPosition(0, 0);
-            Console.CursorVisible = false;
-            Console.WriteLine("****GARAGE****");
-            Console.WriteLine("****(L)ist****");
-            //Console.WriteLine("List all the vehicle in the (G)arage");
-            //Console.WriteLine("List vehicle (T)ypes");
-            Console.WriteLine("****(S)earch****");
-            //Console.WriteLine("Search on the (N)umber plate");
-            //Console.WriteLine("Search on (P)roperties");
-            Console.WriteLine("****(E)dit****");
-            //Console.WriteLine("(A)dd A Vehicle");
-            //Console.WriteLine("(R)emove a Vehicle");
-            Console.WriteLine("    (B)ack   ");
-            Console.WriteLine("    (Q)uit");
+          
 
             var menuMode = true;
             do {
+
+                Console.SetCursorPosition(0, 0);
+                Console.CursorVisible = false;
+                Console.WriteLine("****GARAGE****");
+                Console.WriteLine("****(L)ist****");
+                GarageHandler.PrintList();
+
+                //Console.WriteLine("List all the vehicle in the (G)arage");
+                //Console.WriteLine("List vehicle (T)ypes");
+                Console.WriteLine("****(S)earch****");
+                //Console.WriteLine("Search on the (N)umber plate");
+                //Console.WriteLine("Search on (P)roperties");
+                Console.WriteLine("****(E)dit****");
+                Console.WriteLine("(A)dd A Vehicle");
+                Console.WriteLine("(R)emove a Vehicle");
+                Console.WriteLine("    (B)ack   ");
+                Console.WriteLine("    (Q)uit");
 
                 var key = Console.ReadKey(intercept: true).Key;
                 switch (key)
@@ -41,6 +53,7 @@ namespace Oskar_Ljungdahl_Garage
                     case ConsoleKey.L:
                         menuMode = true;
                         Console.WriteLine("L preesed");
+                        //LicensePlate();
                         break;
 
                     case ConsoleKey.G:
@@ -75,7 +88,9 @@ namespace Oskar_Ljungdahl_Garage
 
                     case ConsoleKey.A:
                         menuMode = true;
-                        Console.WriteLine("A preesed");
+                       
+                        GarageHandler.Add();
+                        menuMode = false;
                         break;
 
                     case ConsoleKey.R:
@@ -95,6 +110,7 @@ namespace Oskar_Ljungdahl_Garage
 
                 }
             } while (menuMode);
+            printMenu();
 
         }
     }

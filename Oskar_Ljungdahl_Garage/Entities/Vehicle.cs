@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Oskar_Ljungdahl_Garage.Entities
 {
-    class Vehicle
+    internal abstract class Vehicle : IDrawable
     {
 
         public int Wheels { get; set; }
@@ -22,8 +22,11 @@ namespace Oskar_Ljungdahl_Garage.Entities
             TopSpeed = topSpeed;
             Seats = seats;
             NumberPlate = numberPlate;
-
-
+            Color = color;
         }
+
+     
+
+
     }
 }
