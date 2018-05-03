@@ -11,12 +11,11 @@ namespace Oskar_Ljungdahl_Garage.Entities
 
         public int Length { get; set; }
         public bool Articulated { get; set; }
-        public int Lenght { get; }
+       
 
-        public Bus(int wheels, int topSpeed, int seats, string numberPlate, ConsoleColor color, int lenght, bool articulated) : base(wheels, topSpeed, seats, numberPlate, color)
+        public Bus(int wheels, int topSpeed, int seats, string numberPlate, ConsoleColor color, int length, bool articulated):base(wheels, topSpeed, seats, numberPlate, color)
         {
-        
-            Lenght = lenght;
+            Length = length;
             Articulated = articulated;
         }
     }
